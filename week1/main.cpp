@@ -1,33 +1,28 @@
 #include <stdio.h>
 
-
+ 
 
 int main(void) {
-
+	
+	int u;
 	int a;
-	int b;
-	int c;
+	int t;
+	int v;
+	int s;
 
-	a = 10;
-	b = 20;
+	printf("enter the initial velocity...");
+	scanf_s("%i", &u);
 
-	c = a * b;
+	printf("enter the acceleration of the object...");
+	scanf_s("%i", &a);
 
-	printf("voer een geheel getal in...");
-	scanf_s("%d", &b);
+	printf("enter the time that has elapsed...");
+	scanf_s("%i", &t);
 
-	if (b > 9) {
+	v = u + a * t;
+	s = u * t + 0.5 * a * t * t;
 
-		printf("het invgevoerde getal was groter dan 9");
-
-	}
-	else {
-
-		printf("het ingevoerde getal was kleiner of gelijk aan 9");
-
-	}
-	printf("programeren is %d leuk %d %d \n", a, b, c);
-	printf("hoi");
+	printf("the final velocity is %d and the object traversed %d distance", v, s);
 
 	return 0;
 }
