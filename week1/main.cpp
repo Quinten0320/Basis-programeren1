@@ -3,26 +3,40 @@
  
 
 int main(void) {
-	
-	int u;
 	int a;
-	int t;
-	int v;
-	int s;
+	int b;
+	int c;
+	int sum;
+	int average;
+	int product;
+	int smallest;
+	int largest;
 
-	printf("enter the initial velocity...");
-	scanf_s("%i", &u);
+	printf("enter three different integers:");
+	scanf_s("%d %d %d", &a, &b, &c);
 
-	printf("enter the acceleration of the object...");
-	scanf_s("%i", &a);
+	sum = a + b + c;
+	printf("Sum is %d\n", sum);
 
-	printf("enter the time that has elapsed...");
-	scanf_s("%i", &t);
+	average = sum / 3;
+	printf("average is %d\n", average);
+	
+	product = a * b * c;
+	printf("product is %d\n", product);
 
-	v = u + a * t;
-	s = u * t + 0.5 * a * t * t;
+	if (a > b && a > c)
+		printf("largest is %d\n", a);
+	else if (b > a && b > c)
+		printf("larest is %d\n", b);
+	else if (c > a && c > b)
+		printf("largest is %d\n", c);
 
-	printf("the final velocity is %d and the object traversed %d distance", v, s);
+	if (a < b && a < c)
+		printf("smallest is %d\n", a);
+	else if (b < a && b < c)
+		printf("smallest is %d\n", b);
+	else if (c < a && c < b)
+		printf("smallest is %d\n", c);
 
 	return 0;
 }
